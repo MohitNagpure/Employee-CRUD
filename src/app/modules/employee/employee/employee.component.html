@@ -1,0 +1,38 @@
+<div class="wrapper">
+    <div class="form-inner-cont">
+        <h3>Add Employee Details</h3>
+        <form action="#" method="post" class="signin-form">
+            <div class="form-input">
+                <span class="fa fa-user-o" aria-hidden="true"></span>
+                <input type="text" placeholder="First Name" [(ngModel)]="service.currentEmployee.firstName"
+                    name="first" />
+            </div>
+            <div class="form-input">
+                <span class="fa fa-user-o" aria-hidden="true"></span>
+                <input type="text" placeholder="Last Name" [(ngModel)]="service.currentEmployee.lastName" name="last" />
+            </div>
+            <div class="form-input">
+                <span class="fa fa-envelope-o" aria-hidden="true"></span>
+                <input type="text" placeholder="Address" [(ngModel)]="service.currentEmployee.address" name="address" />
+            </div>
+            <div class="form-input">
+                <span class="fa fa-key" aria-hidden="true"></span>
+                <input type="text" placeholder="Employee code" [(ngModel)]="service.currentEmployee.employeeCode"
+                    name="employeeCode" />
+            </div>
+            <div class="form-input">
+                <span class="fa fa-key" aria-hidden="true"></span>
+                <input type="text" placeholder="Designation" [(ngModel)]="service.currentEmployee.designation"
+                    name="designation" />
+            </div>
+            <div class="row login-remember d-grid">
+                <div class="col-md-6">
+                    <button class="btn theme-button" (click)="save(service.currentEmployee)">Save</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="btn theme-button" (click)="clear()">Clear</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

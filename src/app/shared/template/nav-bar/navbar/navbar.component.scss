@@ -1,0 +1,15 @@
+.navbar{
+    background-image: linear-gradient(262deg, #309bf0 100%, #2061b3 4%);
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
+.navbar-light .navbar-toggler{
+    color:#ffffff;
+    border-color:#ffffff;
+}
+.navbar-light .navbar-toggler-icon{
+    background-image: url("/../assets/menu-of-three-lines.png");
+    // background-image: url("../../../../");
+}

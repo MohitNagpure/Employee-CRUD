@@ -1,0 +1,34 @@
+.emp-list {
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 1rem;
+    th {
+        background: rgba(0, 0, 0, 0.6);
+        color: #ffffff;
+    }
+    td {
+        color: #ffffff;
+    }
+    tr {
+        &:hover {
+            background: rgba(0, 0, 0, 1.075);
+        }
+    }
+    .edit-button{
+        text-align: center;
+        background: none;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    .fa-pencil-square-o {
+        color: yellow;
+        font-size: 14px;
+        margin-right: 5px;
+    }
+    .fa-trash-o {
+        color: red;
+        font-size: 14px;
+        margin-right: 5px;
+    }
+}
