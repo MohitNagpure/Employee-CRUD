@@ -21,7 +21,8 @@ export class EmployeeService {
     designation: '',
     address: '',
     employeeCode: '',
-    id: null
+    id: null,
+    isfavorite:false
   }
 
   constructor(

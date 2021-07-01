@@ -4,5 +4,6 @@ export declare class Employee {
     lastName: string;
     designation: string;
     address: string;
-    employeeCode: string
+    employeeCode: string;
+    isfavorite: boolean;
 }

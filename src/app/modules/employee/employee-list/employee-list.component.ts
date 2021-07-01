@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Employee } from 'src/app/model/employee.model';
 import { EmployeeService } from '../../../services/employee.service';
 import { ToastrService } from 'ngx-toastr';
 import { NgxSpinnerService } from "ngx-spinner";
 import { Spinner } from 'ngx-spinner/lib/ngx-spinner.enum';
+import { newArray } from '@angular/compiler/src/util';
 
 
 @Component({
@@ -13,8 +14,11 @@ import { Spinner } from 'ngx-spinner/lib/ngx-spinner.enum';
 })
 export class EmployeeListComponent implements OnInit {
 
+  // @Output() toggle = new EventEmitter<boolean>();
+
   //create class to store data
   allEmployee: Employee[];
+  // isfavorite: boolean = false;
 
   constructor(
     public service: EmployeeService,
@@ -41,7 +45,9 @@ export class EmployeeListComponent implements OnInit {
     //     }, 1000);
     //   });
     //Remove subscribe methoda //
+    // this.allEmployee = this.service.getAllEmployee();
     this.service.getAllEmployee();
+
   }
 
   //for delete
@@ -68,5 +74,15 @@ export class EmployeeListComponent implements OnInit {
     this.toastrService.warning("You are editing the employee details", '');
   }
 
+  onFavoriteClick(employee: Employee) {
+    // this.isfavorite = !this.isfavorite;
+    console.log(employee);
+    if (employee.isfavorite) {
+      employee.isfavorite = false;
+    }
+    else {
+      employee.isfavorite = true;
+    }
+  }
 }
 

@@ -1,4 +1,15 @@
 <div class="emp-list">
+    <!-- <div class="row">
+        <div class="col-sm-3" style="padding: 12px;" *ngFor="let employee of service.allEmployee">
+            <div class="card">        
+                <div class="card-block">
+                   <img src="../../../../assets/filled.png" *ngIf="addtofav" (click)="changeToBlank(employee)">
+                   <img src="../../../../assets/blank.png" *ngIf="!addtofav" (click)="changeToFilled(employee.id)">
+                </div>
+            </div>
+        </div> -->
+
+
     <div>
         <table *ngIf="service.allEmployee.length > 0" class="table table-striped table-hover">
             <thead class="thead-dark">
@@ -10,6 +21,7 @@
                     <th>Designation</th>
                     <th>Edit</th>
                     <th>Delete</th>
+                    <tH>Fav</tH>
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +40,20 @@
                         <a class="edit-button" (click)="deleteEmp(employee.id)">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                         </a>
+                    </td>
+                    <td>
+                        <div class="card-block" >
+
+                            <span class="fa" [ngClass]="{
+                                'fa-heart-o': !employee.isfavorite,
+                                'fa-heart': employee.isfavorite }" (click)="onFavoriteClick(employee)" style="color: #ffffff; font-size: 30px;"> 
+                            </span>
+
+                            <!-- <img src="../../../../assets/filled.png" *ngIf="employee.isfavorite"
+                                (click)="onFavoriteClick(employee.id)">
+                            <img src="../../../../assets/blank.png" *ngIf="!employee.isfavorite"
+                                (click)="onFavoriteClick(employee.id)"> -->
+                        </div>
                     </td>
                 </tr>
 
