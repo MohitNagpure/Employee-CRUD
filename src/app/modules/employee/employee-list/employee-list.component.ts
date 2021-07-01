@@ -77,6 +77,7 @@ export class EmployeeListComponent implements OnInit {
   onFavoriteClick(employee: Employee) {
     // this.isfavorite = !this.isfavorite;
     console.log(employee);
+    console.log(employee.id);
     if (employee.isfavorite) {
       employee.isfavorite = false;
     }
